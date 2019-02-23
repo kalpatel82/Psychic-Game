@@ -9,11 +9,6 @@ var guessLeft = 9;
 var guessSoFar = [];
 
 
-//Variables to hold places in HTML to display wins, losses, guesses
-var winsText = document.getElementById("wins-text");
-var lossesText = document.getElementById("losses-text");
-var guessleftText = document.getElementById("guessesLeft-text");
-var guessesSoFartext = document.getElementById("guessessoFar-text");
 
 //When key is pressed...
 document.onkeypress = function (event) {
@@ -55,25 +50,13 @@ document.onkeypress = function (event) {
     }
 
 
-    var html = 
-    '<p> Wins: ' + wins + '</p>' +
-    '<p> Losses ' + losses + '</p>' +
-    '<p> Guesses left ' + guessLeft + '<p>' +
-    '<p> Guessed so far ' + guessSoFar + '<p>';
+    // Print results to html doc
+    var html =
+        '<p> Wins: ' + wins + '</p>' +
+        '<p> Losses ' + losses + '</p>' +
+        '<p> Guesses left ' + guessLeft + '<p>' +
+        '<p> Guessed so far ' + guessSoFar + '<p>';
     document.getElementById("results").innerHTML = html;
-
-
-    //print out results
-    // document.getElementById("wins-text").innerHTML = "Wins: " + wins;
-    // document.getElementById("losses-text").innerHTML = "Losses: " + lossesText
-    // document.getElementById("guessesLeft-text").innerHTML = "Guesses Left: " + guessLeft;   
-    // document.getElementById("guessessofar-text").innerHTML = "Your guesses so far: " + guessSoFar;
-
-    // winsText.textContent = "Wins: " + wins;
-    // lossesText.textContent = "losses " + losses;
-    // guessleftText.textContent = "Guesses Left " + guessLeft;
-    // guessesSoFartext.textContent = "Your guesses so far: " + guessSoFar;
-
 
 }
 
